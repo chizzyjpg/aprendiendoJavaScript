@@ -12,13 +12,16 @@ const obtenerInformacion = (materia) => {
   }
 };
 
-let info = obtenerInformacion("logica");
-let profe = info[1][1];
+let info = obtenerInformacion(prompt("Ingrece materia"));
 
 if (info != false) {
-  document.write(`alumnos precente en ${info[1]} son: `);
-  let i = 1;
+  let profe = info[0][0];
+  document.write(
+    `el profesor de <b style = 'color:red'>${info[1]}</b> es: <b style = 'color:red'>${profe}</b> y sus alumnos son: <b style = 'color:red'>${info[0][1]}</b>`
+  );
+  let i = 2;
   while (info[0][i] != undefined) {
-    document.write(`, ${info[0][i]}`);
+    document.write(`, <b style = 'color:red'>${info[0][i]}</b>`);
+    i++;
   }
 }
