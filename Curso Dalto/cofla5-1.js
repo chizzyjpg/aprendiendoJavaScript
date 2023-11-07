@@ -29,8 +29,7 @@ const aprobo = ()=>{
         if (trabajos >= 3){
             console.log("%cTrabajos practicos en Orden", "color:green");
         } else {
-            console.log("%cFaltan trabajos practicos", "color:red");
-
+            console.log("%cFaltan trabajos practicos", "color:red")
         }
     }
 }
