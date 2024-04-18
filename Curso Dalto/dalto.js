@@ -292,3 +292,62 @@ console.log(Math.LOG2E)
 
 // Logaritmo de Euler base 10
 console.log(Math.LOG10E)
+
+
+// DOM
+
+//toma el elemento de html con el id "parrafo" y lo asigna en texto
+let texto = document.getElementById("parrafo");
+//document.write(texto);
+
+// toma todas las etiquetas 'p' de html
+texto = document.getElementsByTagName("p");
+// muestra una coleccion, pero al colocar el indice [0] muestra directamente el primer elemento
+//document.write(texto[0]);
+
+//toma el elemento con id parrafo, esto trabaja como cuando llamamos en css
+texto = document.querySelector("#parrafo");
+//document.write(texto);
+
+
+// DEFINIR MODIFICAR Y ELIMINAR ATRIBUTOS
+
+const rangoEtario = document.querySelector(".rangoEtario");
+// Modifica
+// rangoEtario.setAttribute("type","color");
+
+// Saber tipo de atributo
+// document.write(rangoEtario.getAttribute("type"));
+
+// Remover atributo
+// rangoEtario.removeAttribute("type");
+
+
+
+// ATRIBUTOS GLOBALES
+
+const title = document.querySelector(".title");
+
+// Permite modificar el texto en el navegador
+// title.setAttribute("contentEditable", "true");
+
+// Modifica de donde empieza el texto
+// title.setAttribute("dir","ltr"); //ltr left to right
+// title.setAttribute("dir","rtl"); //rtl right to left
+
+// Oculta, no es necesario el true, porque aunque no este oculta y la unica manera de desocultarlo es removiendo el hiden linea 323
+// title.setAttribute("hidden", "true");
+
+// Al dar tab permite que salte entre los textos funciona con el index, a mayor numero se mostra mas adelante
+title.setAttribute("tabindex", 0);
+
+// Modifica el titulo del objeto
+title.setAttribute("title","hola pto");
+
+
+// ATRIBUTOS IMPUTS
+
+const imput = document.querySelector(".normalImput");
+
+// muestra nombre de la clase
+document.write("hola");
