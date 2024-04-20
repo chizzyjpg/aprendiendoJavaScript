@@ -297,22 +297,22 @@ console.log(Math.LOG10E)
 // DOM
 
 //toma el elemento de html con el id "parrafo" y lo asigna en texto
-let texto = document.getElementById("parrafo");
+// let texto = document.getElementById("parrafo");
 //document.write(texto);
 
 // toma todas las etiquetas 'p' de html
-texto = document.getElementsByTagName("p");
+// texto = document.getElementsByTagName("p");
 // muestra una coleccion, pero al colocar el indice [0] muestra directamente el primer elemento
 //document.write(texto[0]);
 
 //toma el elemento con id parrafo, esto trabaja como cuando llamamos en css
-texto = document.querySelector("#parrafo");
+// texto = document.querySelector("#parrafo");
 //document.write(texto);
 
 
 // DEFINIR MODIFICAR Y ELIMINAR ATRIBUTOS
 
-const rangoEtario = document.querySelector(".rangoEtario");
+// const rangoEtario = document.querySelector(".rangoEtario");
 // Modifica
 // rangoEtario.setAttribute("type","color");
 
@@ -326,7 +326,7 @@ const rangoEtario = document.querySelector(".rangoEtario");
 
 // ATRIBUTOS GLOBALES
 
-const title = document.querySelector(".title");
+// const title = document.querySelector(".title");
 
 // Permite modificar el texto en el navegador
 // title.setAttribute("contentEditable", "true");
@@ -339,15 +339,104 @@ const title = document.querySelector(".title");
 // title.setAttribute("hidden", "true");
 
 // Al dar tab permite que salte entre los textos funciona con el index, a mayor numero se mostra mas adelante
-title.setAttribute("tabindex", 0);
+// title.setAttribute("tabindex", 0);
 
 // Modifica el titulo del objeto
-title.setAttribute("title","hola pto");
+// title.setAttribute("title","hola pto");
 
 
-// ATRIBUTOS IMPUTS
+// ATRIBUTOS INPUTS
 
-const imput = document.querySelector(".normalImput");
+// const imput = document.querySelector(".normalImput")
 
 // muestra nombre de la clase
-document.write("hola");
+// document.write(imput.className);
+
+// muestra el valor del objeto
+// document.write(imput.value);
+
+// muestra el tipo y permite modificarlo
+// document.write(imput.type = "range"); //combierte a rango   
+//combierte
+// imput.type = "color";
+
+// acepta imagenes png e imagenes jpg y jpeg
+// imput.accept = "image/png, image/jpeg"
+
+// da atributo formulario al input sirve para botones formulario es el id del formulario al cual funcionar
+// imput.form = "formulario";
+
+// minimo de caracteres
+// imput.minLength = 4;
+
+// marca de agua que se borra al escribir
+// imput.placeholder = "hola";
+
+// campo requerido
+// imput.required = " ";
+
+// STYLE
+
+// const mod = document.querySelector(".mod");
+
+// modifica color recordar usar camel case
+// mod.style.color = "#3a3";
+// mod.style.backgroundColor = "#ff0"; //camelCase
+
+
+
+// CLASES
+
+// agrega la palabra eable y queda la clase "mod eable" 
+// mod.classList.add("eable");
+
+// remuebe la palabra eable y queda "mod"
+// mod.classList.remove("eable");
+
+// mod.classList.add("jaja");
+// devuelve la segunda clase
+// let valor = mod.classList.item(1);
+// document.write(valor);
+
+//devuelve si tiene la clase eable en caso de no tenerla devuelve false sino devuelve true
+// mod.classList.contains("eable"); //false
+// mod.classList.contains("jaja"); //ture
+
+// Verifica si tiene la clase eable, si no la tiene la agrega pero si no la tiene la retira
+// mod.classList.toggle("eable");
+// mod.classList.toggle("eable", false) // con false decimos que si la tiene la retire pero si no la tiene que no la agregue
+// mod.classList.toggle("eable", true) // con true decimos que si la tiene no la retire pero si no la tiene que la agregue
+
+
+
+// OBTENCION Y MODIFICACION DE ELEMENTOS
+
+//devuelve el contenido del elemento sin el formato de html osea que por ejempo no develve las negritas usando <b> pero si nos devuelve
+//el contenido auque este oculto
+// resultado = mod.textContent;
+
+// devuelve el contenido del elemento con el formato de html por ejemplo nos devuelve en negritas usando <b> pero no devuelve el contenido oculto
+// al pasarlo por alert nos devuelve incluso las etiquetas uasdas dentro del elemento
+// resultado = mod.innerHTML;
+
+// devuelve el contenido del elemento con el formato de html por ejemplo nos devuelve en negritas usando <b> pero no devuelve el contenido oculto
+// al pasarlo por alert nos devuelve tanto la etiqueta del mismo elemento y con las que se usaron dentro del mismo
+// resultado = mod.outerHTML;
+
+
+
+// CREACION DE ELEMENTOS
+
+const contenedor = document.querySelector(".contenedor");
+
+// Crea un elemento el cual se deve colocarse en mayusculas para evitar errores
+const item = document.createElement("LI");
+
+// crea nodo o elemento de texto
+const textoDelItem = document.createTextNode("hola soy goku");
+// item.innerHTML = "hola soy goku"; // funciona igual lo unico que no se comporta como un nodo o elemento
+
+item.appendChild(textoDelItem);
+contenedor.appendChild(item);
+
+// document.write();
